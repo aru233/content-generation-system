@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'contentGenerator',
     'django_celery_beat',
     'django_celery_results',
+    'feedRenderer',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -88,6 +90,10 @@ DATABASES = {
 # Celery settings
 CELERY_BROKER_URL = "redis://localhost:6379"
 CELERY_RESULT_BACKEND = "redis://localhost:6379"
+
+# Configuring Redis instance
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
 
 
 # Password validation

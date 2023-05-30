@@ -24,7 +24,8 @@ def contentRequest(request):
 
     request_id = info.id
 
-    task_id = generate_content_task.delay(prompt, tag, request_id) #Adding the request to the job queue
+    task_id = generate_content_task.delay(prompt, tag, request_id)
+    # print("this is the TASK ID from Redis queue: ", task_id)
 
     json_response = {
         "message": "Hello! Your content is being generated. Use the request id to know status",

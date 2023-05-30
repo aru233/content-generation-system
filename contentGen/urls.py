@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    path('', include('contentGenerator.urls')),
-    path('admin/', admin.site.urls),
+    path('app/mycontent', include('contentGenerator.urls')),
+    path('', include('feedRenderer.urls')),
+    path('admin/', admin.site.urls)
 ]
